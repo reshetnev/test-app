@@ -16,33 +16,31 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## Usage
+## Configuration
 
-Run the application with:
+Questions are stored in data/questions.json organized by categories. The structure is a JSON object with a "categories" map. Each category key maps to an object with metadata and an array of question objects.
 
-```bash
-npm start
-```
+Example structure (summary):
 
-or:
+- data/questions.json
+  - categories: {
+    "javascript": {
+      "name": "JavaScript Basics",
+      "questions": [
+        {
+          "question": "What is ...?",
+          "options": ["A", "B", "C"],
+          "answer": 1,          // zero-based index of correct option
+          "explanation": "Brief explanation..."
+        }
+      ]
+    }
+  }
 
-```bash
-node index.js
-```
+How to add categories/questions:
+1. Open data/questions.json.
+2. Add a new key under "categories" (e.g., "htmlcss") with a "name" and "questions" array.
+3. For each question provide: "question" (string), "options" (array of strings), "answer" (integer index into options, zero-based), and optional "explanation" (string).
+4. Save and run the app; the new category will appear in the selection list.
 
-Typical flow (example prompts):
-
-1. The CLI shows a banner and lists available categories (e.g., "JavaScript Basics", "Node.js Fundamentals", "General Programming").
-2. You are prompted to select a category by number.
-3. You are asked how many questions to attempt (choose a number up to the available questions).
-4. The quiz begins. For each question the CLI shows:
-   - Question text
-   - A list of numbered options
-   - A progress bar (e.g., [#####-----] 3/10)
-5. You select an option by entering its number. The CLI shows immediate feedback (Correct / Incorrect) and an explanation if present.
-6. After all questions, the CLI prints a summary with total score, percentage, performance message, and a short list of incorrect questions with correct answers.
-7. You are asked whether you'd like to play again.
-
-Notes:
-- Inputs are numeric selections and simple confirmations. The app validates numeric selection and prompts until a valid choice is made.
-- Errors while reading the data file will show a colored error message and exit.
+Be careful to maintain valid JSON; a trailing comma or missing bracket will cause the app to fail while loading questions.
