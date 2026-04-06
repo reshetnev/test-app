@@ -16,19 +16,25 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## Available Scripts
+## Development
 
-- npm start
-  - Runs: node index.js
-  - Starts the interactive quiz CLI.
+Source code location:
 
-- npm test
-  - Runs: node --test
-  - Placeholder: project contains this script in package.json but there are no tests included yet; running this will execute Node's built-in test runner and currently do nothing meaningful.
+- Entry point: index.js (CLI)
+- Core modules: src/
+  - src/input.js — wrapper around readline for prompts
+  - src/quiz.js — Quiz class and quiz logic
+  - src/colors.js — ANSI color helpers
+- Data: data/questions.json — question categories and content
 
-You can run these with:
+To run locally during development:
 
 ```bash
-npm run start
-npm run test
+node index.js
 ```
+
+If you'd like to iterate on code and test changes quickly, run the command repeatedly; there is no watcher configured. Ensure your Node version matches the engines requirement in package.json (>= 18.0.0).
+
+Recommended developer notes:
+- Keep data/questions.json valid JSON when editing.
+- The application uses only built-in Node APIs, so there are no additional dev dependencies to install.
