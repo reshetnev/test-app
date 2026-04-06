@@ -16,24 +16,12 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## Contributing
+## License
 
-Contributions are welcome. Suggested workflow:
+This repository currently does not include a LICENSE file. If you plan to make this project public or accept contributions, add a license file. Common choices:
 
-1. Fork the repository.
-2. Create a feature branch from main (or the project's default branch):
+- MIT License — permissive, commonly used for small projects
+- Apache-2.0 — permissive with patent protections
+- GNU GPL-3.0 — strong copyleft if you want downstream code to remain open
 
-```bash
-git checkout -b feat/my-feature
-```
-
-3. Make changes and ensure basic manual testing by running the CLI.
-4. Commit and push your branch to your fork.
-5. Open a pull request describing the change.
-
-Guidelines:
-- Keep changes small and focused.
-- If you add questions to data/questions.json, validate the JSON and follow the existing schema (question, options, answer, explanation).
-- If you add tests, update package.json scripts accordingly.
-
-Please note: this repository currently contains no license file. See the License section below for a recommendation.
+Recommendation: add an MIT license for the quiz-cli project to encourage reuse and contributions. To add MIT, create a LICENSE file with the MIT template and add a short header to package.json.
