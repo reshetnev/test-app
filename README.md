@@ -16,12 +16,14 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## License
+## Credits
 
-This repository currently does not include a LICENSE file. If you plan to make this project public or accept contributions, add a license file. Common choices:
+- Author information: not specified in package.json — repository maintainer: reshetnev (GitHub)
+- Built with Node.js and standard libraries. No external dependencies.
 
-- MIT License — permissive, commonly used for small projects
-- Apache-2.0 — permissive with patent protections
-- GNU GPL-3.0 — strong copyleft if you want downstream code to remain open
+Contact / Questions:
+- Open an issue on this repository (https://github.com/reshetnev/test-app) for support or questions.
 
-Recommendation: add an MIT license for the quiz-cli project to encourage reuse and contributions. To add MIT, create a LICENSE file with the MIT template and add a short header to package.json.
+---
+
+If you would like, I can open a pull request with this README added, or apply additional edits (badges, examples, tests). Please confirm how you'd like to proceed.
