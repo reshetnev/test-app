@@ -16,31 +16,19 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## Configuration
+## Available Scripts
 
-Questions are stored in data/questions.json organized by categories. The structure is a JSON object with a "categories" map. Each category key maps to an object with metadata and an array of question objects.
+- npm start
+  - Runs: node index.js
+  - Starts the interactive quiz CLI.
 
-Example structure (summary):
+- npm test
+  - Runs: node --test
+  - Placeholder: project contains this script in package.json but there are no tests included yet; running this will execute Node's built-in test runner and currently do nothing meaningful.
 
-- data/questions.json
-  - categories: {
-    "javascript": {
-      "name": "JavaScript Basics",
-      "questions": [
-        {
-          "question": "What is ...?",
-          "options": ["A", "B", "C"],
-          "answer": 1,          // zero-based index of correct option
-          "explanation": "Brief explanation..."
-        }
-      ]
-    }
-  }
+You can run these with:
 
-How to add categories/questions:
-1. Open data/questions.json.
-2. Add a new key under "categories" (e.g., "htmlcss") with a "name" and "questions" array.
-3. For each question provide: "question" (string), "options" (array of strings), "answer" (integer index into options, zero-based), and optional "explanation" (string).
-4. Save and run the app; the new category will appear in the selection list.
-
-Be careful to maintain valid JSON; a trailing comma or missing bracket will cause the app to fail while loading questions.
+```bash
+npm run start
+npm run test
+```
