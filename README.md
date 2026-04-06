@@ -16,40 +16,33 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## Features
+## Usage
 
-- Interactive command-line interface (no external UI)
-- Multiple categories loaded from data/questions.json
-- Configurable number of questions per session
-- Multiple-choice questions with immediate feedback and explanations
-- Progress bar and score summary at the end
-- Small utility helpers for colored output (src/colors.js)
-- Easy-to-edit JSON question store for extensibility
-
-## Prerequisites
-
-- Node.js >= 18.0.0 (project sets engines: node >= 18.0.0)
-- No additional dependencies; uses builtin Node.js APIs
-
-## Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/reshetnev/test-app.git
-cd test-app
-```
-
-2. Install dependencies (none required) and ensure Node.js >= 18 is installed. You can verify Node version with:
-
-```bash
-node --version
-```
-
-3. (Optional) Run the app with npm scripts (see below) or directly with node:
+Run the application with:
 
 ```bash
 npm start
-# or
+```
+
+or:
+
+```bash
 node index.js
 ```
+
+Typical flow (example prompts):
+
+1. The CLI shows a banner and lists available categories (e.g., "JavaScript Basics", "Node.js Fundamentals", "General Programming").
+2. You are prompted to select a category by number.
+3. You are asked how many questions to attempt (choose a number up to the available questions).
+4. The quiz begins. For each question the CLI shows:
+   - Question text
+   - A list of numbered options
+   - A progress bar (e.g., [#####-----] 3/10)
+5. You select an option by entering its number. The CLI shows immediate feedback (Correct / Incorrect) and an explanation if present.
+6. After all questions, the CLI prints a summary with total score, percentage, performance message, and a short list of incorrect questions with correct answers.
+7. You are asked whether you'd like to play again.
+
+Notes:
+- Inputs are numeric selections and simple confirmations. The app validates numeric selection and prompts until a valid choice is made.
+- Errors while reading the data file will show a colored error message and exit.
