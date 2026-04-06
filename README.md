@@ -16,25 +16,24 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## Development
+## Contributing
 
-Source code location:
+Contributions are welcome. Suggested workflow:
 
-- Entry point: index.js (CLI)
-- Core modules: src/
-  - src/input.js — wrapper around readline for prompts
-  - src/quiz.js — Quiz class and quiz logic
-  - src/colors.js — ANSI color helpers
-- Data: data/questions.json — question categories and content
-
-To run locally during development:
+1. Fork the repository.
+2. Create a feature branch from main (or the project's default branch):
 
 ```bash
-node index.js
+git checkout -b feat/my-feature
 ```
 
-If you'd like to iterate on code and test changes quickly, run the command repeatedly; there is no watcher configured. Ensure your Node version matches the engines requirement in package.json (>= 18.0.0).
+3. Make changes and ensure basic manual testing by running the CLI.
+4. Commit and push your branch to your fork.
+5. Open a pull request describing the change.
 
-Recommended developer notes:
-- Keep data/questions.json valid JSON when editing.
-- The application uses only built-in Node APIs, so there are no additional dev dependencies to install.
+Guidelines:
+- Keep changes small and focused.
+- If you add questions to data/questions.json, validate the JSON and follow the existing schema (question, options, answer, explanation).
+- If you add tests, update package.json scripts accordingly.
+
+Please note: this repository currently contains no license file. See the License section below for a recommendation.
