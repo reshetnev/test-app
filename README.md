@@ -16,8 +16,40 @@ An interactive command-line quiz game for learning JavaScript.
 - [License](#license)
 - [Credits](#credits)
 
-## Description
+## Features
 
-quiz-cli is a small, dependency-free command-line quiz application written for Node.js. It presents multiple-choice questions organized by category, records your answers, shows immediate feedback and explanations, and summarizes your score at the end. The project is intended for learners and instructors who want a lightweight, locally-run quiz tool to practice JavaScript and Node.js fundamentals.
+- Interactive command-line interface (no external UI)
+- Multiple categories loaded from data/questions.json
+- Configurable number of questions per session
+- Multiple-choice questions with immediate feedback and explanations
+- Progress bar and score summary at the end
+- Small utility helpers for colored output (src/colors.js)
+- Easy-to-edit JSON question store for extensibility
 
-The application is driven by a simple JSON data file (data/questions.json) so you can add or modify categories and questions without changing the code. The CLI provides interactive prompts to select a category and number of questions, then walks the user through each question with a progress indicator.
+## Prerequisites
+
+- Node.js >= 18.0.0 (project sets engines: node >= 18.0.0)
+- No additional dependencies; uses builtin Node.js APIs
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/reshetnev/test-app.git
+cd test-app
+```
+
+2. Install dependencies (none required) and ensure Node.js >= 18 is installed. You can verify Node version with:
+
+```bash
+node --version
+```
+
+3. (Optional) Run the app with npm scripts (see below) or directly with node:
+
+```bash
+npm start
+# or
+node index.js
+```
